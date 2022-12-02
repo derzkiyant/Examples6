@@ -10,7 +10,10 @@ void Task41()
                         "Посчитайте, сколько чисел больше 0 ввёл пользователь.\nПримеры:" +
                         "\n0, 7, 8, -2, -2 -> 2\n1, -7, 567, 89, 223 -> 4");
 
-    Console.WriteLine("Вводите числа c клавиатуры (чтобы остановить ввод, введите stop");
+    Console.Write("Вводите числа c клавиатуры. Чтобы остановить ввод, введите ");
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("stop");
+    Console.ResetColor();
 
     List<int> dinArray = new List<int>();
     string answer = Console.ReadLine();
@@ -31,12 +34,12 @@ void Task41()
             count++;
         }
     }
-    Console.WriteLine(String.Join(", ", dinArray) + $" -> {count}");
+    Console.WriteLine("[" + String.Join(", ", dinArray) + $"] -> {count}");
 }
 
 void Task43()
 {
-    Console.WriteLine("Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, " +
+    Console.WriteLine("\nЗадача 43: Напишите программу, которая найдёт точку пересечения двух прямых, " +
                         "заданных уравнениями y = k1 * x + b1, y = k2 * x + b2. " +
                         "Значения b1, k1, b2 и k2 задаются пользователем.\nПример:" +
                         "\nb1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)");
